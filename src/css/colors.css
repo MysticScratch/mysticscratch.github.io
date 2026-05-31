@@ -1,148 +1,52 @@
-/* =========================
-   Catppuccin Theme Tokens
-   Dark-first (Mocha default)
-   Light override (Latte)
-   ========================= */
+$ui-primary: var(--ui-primary, hsla(215, 100%, 95%, 1)); /* #E5F0FF */
+$ui-secondary: var(--ui-secondary, hsla(215, 75%, 95%, 1)); /* #E9F1FC */
+$ui-tertiary: var(--ui-tertiary, hsla(215, 50%, 90%, 1)); /* #D9E3F2 */
 
-/* =========================================================
-   MOCHA (DARK MODE - DEFAULT)
-   ========================================================= */
-:root {
-  color-scheme: dark;
+$ui-modal-overlay: var(--ui-modal-overlay, hsla(194, 100%, 65%, 0.9)); /* 90% transparent version of motion-primary */
 
-  /* Base surfaces */
-  --base: #1e1e2e;
-  --mantle: #181825;
-  --crust: #11111b;
+$ui-white: hsla(0, 100%, 100%, 1); /* #FFFFFF */
+$ui-white-dim: hsla(0, 100%, 100%, 0.75); /* 25% transparent version of ui-white */
+$ui-white-transparent: hsla(0, 100%, 100%, 0.25); /* 25% transparent version of ui-white */
+$ui-transparent: hsla(0, 100%, 100%, 0); /* 25% transparent version of ui-white */
 
-  --surface0: #313244;
-  --surface1: #45475a;
-  --surface2: #585b70;
+$ui-black-transparent-default: hsla(0, 0%, 0%, 0.15); /* 15% transparent version of black */
+$ui-black-transparent: var(--ui-black-transparent, $ui-black-transparent-default);
 
-  --overlay0: #6c7086;
-  --overlay1: #7f849c;
-  --overlay2: #9399b2;
+$text-primary: var(--text-primary, hsla(225, 15%, 40%, 1)); /* #575E75 */
+$text-primary-transparent: hsla(225, 15%, 40%, 0.75);
 
-  /* Text */
-  --text: #cdd6f4;
-  --subtext0: #a6adc8;
-  --subtext1: #bac2de;
+$motion-primary: hsla(194, 100%, 50%, 1); /* #00c3ff */
+$motion-tertiary: hsla(203, 100%, 39%, 1); /* #007bc7 */
+$motion-transparent: hsla(194, 100%, 50%, 0.35); /* 35% transparent version of motion-primary */
+$motion-light-transparent: hsla(203, 100%, 39%, 0.15); /* 15% transparent version of motion-primary */
 
-  /* Accents */
-  --rosewater: #f5e0dc;
-  --flamingo: #f2cdcd;
-  --pink: #f5c2e7;
-  --mauve: #cba6f7;
-  --red: #f38ba8;
-  --maroon: #eba0ac;
-  --peach: #fab387;
-  --yellow: #f9e2af;
-  --green: #a6e3a1;
-  --teal: #94e2d5;
-  --sky: #89dceb;
-  --sapphire: #74c7ec;
-  --blue: #89b4fa;
-  --lavender: #b4befe;
+/* opt-in theme overrides */
+$motion-primary-dark: #009CCC; /*top bar color when in dark mode*/
+$ui-primary-light: hsla(215, 100%, 95%, 1);
+$ui-secondary-light: hsla(215, 75%, 95%, 1);
+$ui-tertiary-light: hsla(215, 50%, 90%, 1);
+$text-primary-light: hsla(225, 15%, 40%, 1);
 
-  /* UI semantic mapping */
-  --ui-primary: var(--surface0);
-  --ui-secondary: var(--surface1);
-  --ui-tertiary: var(--surface2);
+$red-primary: hsla(194, 100%, 50%, 1); /* #00c3ff */
+$red-tertiary: hsla(203, 100%, 39%, 1); /* #007bc7 */
 
-  --text-primary: var(--text);
+$sound-primary: hsla(300, 53%, 60%, 1); /* #CF63CF */
+$sound-tertiary: hsla(300, 48%, 50%, 1); /* #BD42BD */
 
-  /* Motion / accent system */
-  --motion-primary: var(--mauve);
-  --motion-tertiary: var(--lavender);
-  --motion-transparent: rgba(203, 166, 247, 0.35);
-  --motion-light-transparent: rgba(203, 166, 247, 0.15);
+$control-primary: hsla(38, 100%, 55%, 1); /* #FFAB19 */
 
-  --ui-modal-overlay: rgba(30, 30, 46, 0.85);
+$data-primary: hsla(30, 100%, 55%, 1); /* #FF8C1A */
 
-  /* Feedback */
-  --error-primary: var(--red);
-  --error-light: var(--maroon);
-  --error-transparent: rgba(243, 139, 168, 0.25);
+$pen-primary: hsla(163, 85%, 40%, 1); /* #0FBD8C */
+$pen-transparent: hsla(163, 85%, 40%, 0.25); /* #0FBD8C */
 
-  --control-primary: var(--blue);
-  --data-primary: var(--sky);
-  --pen-primary: var(--green);
-  --pen-transparent: rgba(166, 227, 161, 0.25);
+$error-primary: hsla(30, 100%, 55%, 1); /* #FF8C1A */
+$error-light: hsla(30, 100%, 70%, 1); /* #FFB366 */
+$error-transparent: hsla(30, 100%, 55%, 0.25); /* #FF8C1A */
 
-  --extensions-primary: var(--lavender);
-  --extensions-transparent: rgba(180, 190, 254, 0.35);
+$extensions-primary: hsla(194, 100%, 50%, 1);
+$extensions-tertiary: hsla(203, 100%, 39%, 1);
+$extensions-transparent: hsla(194, 100%, 50%, 0.35); /* 35% transparent version of extensions-primary */
+$extensions-light: hsla(203, 100%, 39%, 1); /* opaque version of extensions-transparent, on white bg */
 
-  --drop-highlight: rgba(203, 166, 247, 0.35);
-}
-
-
-/* =========================================================
-   LATTE (LIGHT MODE OVERRIDE)
-   ========================================================= */
-[data-theme="light"] {
-  color-scheme: light;
-
-  /* Base surfaces */
-  --base: #eff1f5;
-  --mantle: #e6e9ef;
-  --crust: #dce0e8;
-
-  --surface0: #ccd0da;
-  --surface1: #bcc0cc;
-  --surface2: #acb0be;
-
-  --overlay0: #9ca0b0;
-  --overlay1: #8c8fa1;
-  --overlay2: #7c7f93;
-
-  /* Text */
-  --text: #4c4f69;
-  --subtext0: #6c6f85;
-  --subtext1: #5c5f77;
-
-  /* Accents */
-  --rosewater: #dc8a78;
-  --flamingo: #dd7878;
-  --pink: #ea76cb;
-  --mauve: #8839ef;
-  --red: #d20f39;
-  --maroon: #e64553;
-  --peach: #fe640b;
-  --yellow: #df8e1d;
-  --green: #40a02b;
-  --teal: #179299;
-  --sky: #04a5e5;
-  --sapphire: #209fb5;
-  --blue: #1e66f5;
-  --lavender: #7287fd;
-
-  /* UI semantic mapping */
-  --ui-primary: var(--surface0);
-  --ui-secondary: var(--surface1);
-  --ui-tertiary: var(--surface2);
-
-  --text-primary: var(--text);
-
-  /* Motion / accent system */
-  --motion-primary: var(--mauve);
-  --motion-tertiary: var(--lavender);
-  --motion-transparent: rgba(136, 57, 239, 0.35);
-  --motion-light-transparent: rgba(136, 57, 239, 0.15);
-
-  --ui-modal-overlay: rgba(220, 224, 232, 0.85);
-
-  /* Feedback */
-  --error-primary: var(--red);
-  --error-light: var(--maroon);
-  --error-transparent: rgba(210, 15, 57, 0.25);
-
-  --control-primary: var(--blue);
-  --data-primary: var(--sky);
-  --pen-primary: var(--green);
-  --pen-transparent: rgba(64, 160, 43, 0.25);
-
-  --extensions-primary: var(--lavender);
-  --extensions-transparent: rgba(114, 135, 253, 0.35);
-
-  --drop-highlight: rgba(136, 57, 239, 0.25);
-}
+$drop-highlight: hsla(194, 100%, 77%, 1); /* lighter than motion-primary */
