@@ -1,66 +1,148 @@
 /* =========================
-   Catppuccin Mocha Mauve Theme
+   Catppuccin Theme Tokens
+   Dark-first (Mocha default)
+   Light override (Latte)
    ========================= */
 
-/* UI SURFACES */
-$ui-primary: var(--ui-primary, hsla(267, 84%, 92%, 1)); /* soft mauve tint */
-$ui-secondary: var(--ui-secondary, hsla(267, 70%, 94%, 1));
-$ui-tertiary: var(--ui-tertiary, hsla(267, 55%, 90%, 1));
+/* =========================================================
+   MOCHA (DARK MODE - DEFAULT)
+   ========================================================= */
+:root {
+  color-scheme: dark;
 
-$ui-modal-overlay: var(--ui-modal-overlay, hsla(267, 84%, 60%, 0.9));
+  /* Base surfaces */
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --crust: #11111b;
 
-/* NEUTRALS */
-$ui-white: hsla(0, 0%, 100%, 1);
-$ui-white-dim: hsla(0, 0%, 100%, 0.75);
-$ui-white-transparent: hsla(0, 0%, 100%, 0.25);
-$ui-transparent: hsla(0, 0%, 100%, 0);
+  --surface0: #313244;
+  --surface1: #45475a;
+  --surface2: #585b70;
 
-$ui-black-transparent-default: hsla(0, 0%, 0%, 0.15);
-$ui-black-transparent: var(--ui-black-transparent, $ui-black-transparent-default);
+  --overlay0: #6c7086;
+  --overlay1: #7f849c;
+  --overlay2: #9399b2;
 
-/* TEXT */
-$text-primary: var(--text-primary, hsla(267, 20%, 30%, 1));
-$text-primary-transparent: hsla(267, 20%, 30%, 0.75);
+  /* Text */
+  --text: #cdd6f4;
+  --subtext0: #a6adc8;
+  --subtext1: #bac2de;
 
-/* ACCENT (Mauve core) */
-$motion-primary: hsla(267, 84%, 86%, 1); /* #cba6f7 */
-$motion-tertiary: hsla(267, 70%, 72%, 1);
-$motion-transparent: hsla(267, 84%, 86%, 0.35);
-$motion-light-transparent: hsla(267, 70%, 72%, 0.15);
+  /* Accents */
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+  --peach: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --teal: #94e2d5;
+  --sky: #89dceb;
+  --sapphire: #74c7ec;
+  --blue: #89b4fa;
+  --lavender: #b4befe;
 
-/* DARK MODE OVERRIDES */
-$motion-primary-dark: #b892f6;
+  /* UI semantic mapping */
+  --ui-primary: var(--surface0);
+  --ui-secondary: var(--surface1);
+  --ui-tertiary: var(--surface2);
 
-$ui-primary-light: hsla(267, 84%, 92%, 1);
-$ui-secondary-light: hsla(267, 70%, 94%, 1);
-$ui-tertiary-light: hsla(267, 55%, 90%, 1);
-$text-primary-light: hsla(267, 20%, 30%, 1);
+  --text-primary: var(--text);
 
-/* SEMANTIC ACCENTS (re-mapped to mauve system) */
-$red-primary: hsla(267, 84%, 86%, 1);
-$red-tertiary: hsla(267, 70%, 72%, 1);
+  /* Motion / accent system */
+  --motion-primary: var(--mauve);
+  --motion-tertiary: var(--lavender);
+  --motion-transparent: rgba(203, 166, 247, 0.35);
+  --motion-light-transparent: rgba(203, 166, 247, 0.15);
 
-$sound-primary: hsla(280, 60%, 70%, 1);
-$sound-tertiary: hsla(280, 55%, 60%, 1);
+  --ui-modal-overlay: rgba(30, 30, 46, 0.85);
 
-$control-primary: hsla(267, 84%, 78%, 1);
+  /* Feedback */
+  --error-primary: var(--red);
+  --error-light: var(--maroon);
+  --error-transparent: rgba(243, 139, 168, 0.25);
 
-$data-primary: hsla(250, 70%, 75%, 1);
+  --control-primary: var(--blue);
+  --data-primary: var(--sky);
+  --pen-primary: var(--green);
+  --pen-transparent: rgba(166, 227, 161, 0.25);
 
-/* PEN / DRAWING */
-$pen-primary: hsla(267, 70%, 60%, 1);
-$pen-transparent: hsla(267, 70%, 60%, 0.25);
+  --extensions-primary: var(--lavender);
+  --extensions-transparent: rgba(180, 190, 254, 0.35);
 
-/* ERROR (kept warm but softened into theme) */
-$error-primary: hsla(350, 65%, 65%, 1);
-$error-light: hsla(350, 70%, 80%, 1);
-$error-transparent: hsla(350, 65%, 65%, 0.25);
+  --drop-highlight: rgba(203, 166, 247, 0.35);
+}
 
-/* EXTENSIONS */
-$extensions-primary: hsla(267, 84%, 86%, 1);
-$extensions-tertiary: hsla(267, 70%, 72%, 1);
-$extensions-transparent: hsla(267, 84%, 86%, 0.35);
-$extensions-light: hsla(267, 70%, 72%, 1);
 
-/* HIGHLIGHTS */
-$drop-highlight: hsla(267, 84%, 90%, 1);
+/* =========================================================
+   LATTE (LIGHT MODE OVERRIDE)
+   ========================================================= */
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Base surfaces */
+  --base: #eff1f5;
+  --mantle: #e6e9ef;
+  --crust: #dce0e8;
+
+  --surface0: #ccd0da;
+  --surface1: #bcc0cc;
+  --surface2: #acb0be;
+
+  --overlay0: #9ca0b0;
+  --overlay1: #8c8fa1;
+  --overlay2: #7c7f93;
+
+  /* Text */
+  --text: #4c4f69;
+  --subtext0: #6c6f85;
+  --subtext1: #5c5f77;
+
+  /* Accents */
+  --rosewater: #dc8a78;
+  --flamingo: #dd7878;
+  --pink: #ea76cb;
+  --mauve: #8839ef;
+  --red: #d20f39;
+  --maroon: #e64553;
+  --peach: #fe640b;
+  --yellow: #df8e1d;
+  --green: #40a02b;
+  --teal: #179299;
+  --sky: #04a5e5;
+  --sapphire: #209fb5;
+  --blue: #1e66f5;
+  --lavender: #7287fd;
+
+  /* UI semantic mapping */
+  --ui-primary: var(--surface0);
+  --ui-secondary: var(--surface1);
+  --ui-tertiary: var(--surface2);
+
+  --text-primary: var(--text);
+
+  /* Motion / accent system */
+  --motion-primary: var(--mauve);
+  --motion-tertiary: var(--lavender);
+  --motion-transparent: rgba(136, 57, 239, 0.35);
+  --motion-light-transparent: rgba(136, 57, 239, 0.15);
+
+  --ui-modal-overlay: rgba(220, 224, 232, 0.85);
+
+  /* Feedback */
+  --error-primary: var(--red);
+  --error-light: var(--maroon);
+  --error-transparent: rgba(210, 15, 57, 0.25);
+
+  --control-primary: var(--blue);
+  --data-primary: var(--sky);
+  --pen-primary: var(--green);
+  --pen-transparent: rgba(64, 160, 43, 0.25);
+
+  --extensions-primary: var(--lavender);
+  --extensions-transparent: rgba(114, 135, 253, 0.35);
+
+  --drop-highlight: rgba(136, 57, 239, 0.25);
+}
